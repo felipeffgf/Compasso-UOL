@@ -1,0 +1,50 @@
+  Cenário 1: Buscar por termo válido
+    Dado que esteja na página inicial
+    Quando buscar pelo produto 'shirt'
+    Então devem ser retornados produtos
+	
+		1. A partir da homescreen do http://automationpractice.com/index.php.
+		2. Selecionar barra de busca.
+		3. Digitar 'shirt' e confirmar.
+		4. O resultado da busca deve ser mostrado na página de buscas.
+		
+  Cenário 2: Busca sem resultados
+    Dado que esteja na página inicial
+	Quando o cliente realizar uma busca por um produto
+	E o produto não é vendido no FakeEcommerce
+	Então deve retornar mensagem de que o produto não foi encontrado
+		
+		1. A partir da homescreen do http://automationpractice.com/index.php.
+		2. Selecionar barra de busca.
+		3. Digitar 'Smartphone' e confirmar.
+		4. O usuário deve ser redirecionado para a página de busca com um alerta de que o produto pesquisado não foi encontrado.
+
+  Cenário 3: Realizar login
+	Dado que o cliente esteja na página de login
+	Quando cliente preenche credenciais de autenticação válidas
+	Então login é realizado com sucesso
+	E cliente é redirecionado para página de usuário
+	
+		1. A partir da homescreen do FakeEcommerce.
+		2. Clicar no botão "Sign in".
+		3. Clicar no campo de preenchimento de e-mail.
+		4. Digitar um e-mail válido e cadastrado.
+		5. Clicar no campo de preenchimento da senha.
+		6. Digitar uma senha válida.
+		7. Clicar no botão "Sign In".
+		8. Cliente deve ser redirecionado para página do perfil de usuário.
+		
+  Cenário 4: Login com falha
+	Dado que o cliente esteja na página de login
+	Quando cliente preenche credenciais de autenticação inválidas
+	Então login falha
+	E uma mensagem de erro sinalizando que autenticação falhou é mostrada
+		
+		1. A partir da homescreen do FakeEcommerce.
+		2. Clicar no botão "Sign in".
+		3. Clicar no campo de preenchimento de e-mail.
+		4. Digitar um e-mail válido não cadastrado.
+		5. Clicar no campo de preenchimento da senha.
+		6. Digitar uma senha válida.
+		7. Clicar no botão "Sign In".
+		8. Cliente deve permanecer na mesma página e deve aparecer um alerta informando que a autenticação falhou.

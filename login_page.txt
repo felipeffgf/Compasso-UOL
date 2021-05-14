@@ -1,0 +1,14 @@
+module Pages
+  class LoginPage < SitePrism::Page
+    set_url '/index.php?controller=authentication&back=my-account'
+
+    element  :breadcrumb, '//*[@id="columns"]/div[1]'
+    element  :input_create_account_email, '//*[@id="email_create"]'
+    element  :btn_create_an_account, '//*[@id="SubmitCreate"]/span'
+    element  :input_login_email, '//*[@id="email"]'
+    element  :input_login_password, '//*[@id="passwd"]'
+    element  :link_forgot_password, '//*[@id="login_form"]/div/p[1]/a'
+    element  :btn_sign_in, '//*[@id="SubmitLogin"]/span'
+    element  :alert_message_authentication_failed, '//*[@id="center_column"]/div[1]/ol/li'
+  end
+end

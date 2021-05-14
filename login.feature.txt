@@ -1,0 +1,23 @@
+# language: pt
+
+Funcionalidade: Login no Ecommerce Fake
+  Como um cliente no site FakeEcommerce
+  Gostaria de realizar login no site
+  Para checar status da compra
+
+
+	Dado que o cliente esteja na página de login
+	
+  # Completar o cenário abaixo
+  Cenário: Realizar login
+
+	Quando cliente preenche credenciais de autenticação válidas
+	Então login é realizado com sucesso
+	E cliente é redirecionado para página de usuário
+
+  # Completar o cenário abaixo
+  Cenário: Login com falha
+	
+	Quando cliente preenche credenciais de autenticação inválidas
+	Então login falha
+	E uma mensagem de erro sinalizando que autenticação falhou é mostrada
